@@ -1,0 +1,32 @@
+<%= form_with(model: main_company, local: true) do |form| %>
+  <% if main_company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(main_company.errors.count, "error") %> prohibited this main_company from being saved:</h2>
+
+      <ul>
+        <% main_company.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cnpj %>
+    <%= form.text_field :cnpj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
