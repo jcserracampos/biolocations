@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :locations
   resources :main_companies
   resources :brands
   get 'home/index'
