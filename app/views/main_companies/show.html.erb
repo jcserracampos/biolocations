@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @main_company.nome %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @main_company.cnpj %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @main_company.brand %>
+</p>
+
+<%= link_to 'Edit', edit_main_company_path(@main_company) %> |
+<%= link_to 'Back', main_companies_path %>
